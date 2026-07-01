@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 
 const shots = [
-  { src: "/images/waffle-matcha.png", label: "Matcha Oreo", span: "row-span-2" },
-  { src: "/images/storefront.png", label: "La boutique", span: "" },
+  { src: "/images/storefront.png", label: "La boutique", span: "row-span-2" },
   { src: "/images/interior-butterfly.png", label: "Le papillon", span: "" },
-  { src: "/images/menu-waffle.png", label: "La carte waffle", span: "row-span-2" },
   { src: "/images/interior-menu.png", label: "Le comptoir", span: "" },
+  { src: "/images/waffle-matcha.png", label: "Matcha Oreo", span: "row-span-2" },
+  { src: "/images/menu-waffle.png", label: "La carte waffle", span: "" },
 ];
 
 export function GallerySection() {
