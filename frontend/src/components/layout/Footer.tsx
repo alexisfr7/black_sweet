@@ -14,16 +14,15 @@ export function Footer() {
             <span>Tous droits réservés</span>
           </div>
           <span className="text-center sm:text-right">
-            Fait avec ♥ par{" "}
+            Fait par{" "}
             <a
               href="https://aureon-digital.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-white/70 hover:text-hotpink transition-colors"
+              className="underline text-white/70 hover:text-hotpink transition-colors font-bold"
             >
               Aureon digital
-            </a>{" "}
-            à Paris
+            </a>
           </span>
         </div>
       </div>

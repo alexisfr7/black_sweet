@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <CartProvider>
       <ScrollProgress />
-      <main id="top" className="relative">
+      <main className="relative">
         <HeroSection />
         <StorySection />
         <MenuSection />

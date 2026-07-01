@@ -29,7 +29,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section ref={ref} className="relative min-h-[100svh] overflow-hidden bg-hero pt-[env(safe-area-inset-top)]">
+    <section id="top" ref={ref} className="relative min-h-[100svh] overflow-hidden bg-hero pt-[env(safe-area-inset-top)]">
       {/* Floating decorative bubbles */}
       <motion.div className="pointer-events-none absolute -left-10 top-32 h-40 w-40 rounded-full bg-pink-grad opacity-30 blur-3xl animate-float" />
       <motion.div className="pointer-events-none absolute -right-16 top-72 h-56 w-56 rounded-full bg-pink-grad opacity-25 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
@@ -77,14 +77,14 @@ export function HeroSection() {
           className="mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row sm:justify-center"
         >
           <a
-            href="/services"
+            href="#menu"
             className="group relative inline-flex h-14 items-center justify-center gap-2 overflow-hidden rounded-full bg-pink-grad px-8 text-base font-bold text-white shadow-pop transition-transform active:scale-95"
           >
             Découvrir la carte
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
-            href="/contact"
+            href="#visite"
             className="inline-flex h-14 items-center justify-center gap-2 rounded-full border-2 border-ink/10 bg-white/70 px-8 text-base font-semibold text-ink backdrop-blur transition active:scale-95"
           >
             <MapPin className="h-4 w-4" /> Nous trouver
