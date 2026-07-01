@@ -21,4 +21,8 @@
 - [x] Corriger les liens "Découvrir la carte" (#menu) et "Nous trouver" (#visite) dans la section Hero
 - [x] Attribuer l'ID `top` directement à la section Hero au lieu du conteneur global `<main>` pour corriger l'animation de surbrillance rose de la barre de navigation
 - [x] Valider le bon comportement de défilement (IntersectionObserver)
+
+## Phase 5 — Optimisations Responsive Mobile
+- [x] Réduire la taille des papillons décoratifs (`h-7 w-7` au lieu de `h-10 w-10`) sur mobile pour la section Menu et les autres sections
+- [x] Décaler les motifs flottants de gauche vers l'intérieur (`left-[10%]` ou `left-[12%]` au lieu de `left-[4%]`) sur mobile pour éviter tout débordement horizontal
 - [x] Push final sur GitHub

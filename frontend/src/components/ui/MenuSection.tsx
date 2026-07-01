@@ -111,7 +111,7 @@ export function MenuSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mt-8 grid gap-4 sm:grid-cols-2"
+          className="mt-8 grid w-full gap-4 sm:grid-cols-2"
         >
           <div className="relative overflow-hidden rounded-3xl bg-ink shadow-pop">
             <img
@@ -129,31 +129,31 @@ export function MenuSection() {
           </div>
 
           {/* Items list */}
-          <div className="space-y-2">
+          <div className="w-full space-y-2">
             {items.map((item, i) => {
               const isPulsing = pulse === item.name;
               return (
                 <motion.div
                   key={item.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: i * 0.04 }}
                   whileHover={{ y: -2 }}
-                  className="group flex items-center gap-3 rounded-2xl bg-white p-4 shadow-soft transition active:scale-[0.98]"
+                  className="group flex items-center gap-2 sm:gap-3 rounded-2xl bg-white p-3 sm:p-4 shadow-soft transition active:scale-[0.98]"
                 >
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <h3 className="truncate font-display text-base font-bold text-ink">{item.name}</h3>
+                    <div className="flex items-center gap-1.5 sm:gap-2">
+                      <h3 className="truncate font-display text-sm sm:text-base font-bold text-ink">{item.name}</h3>
                       {item.tag && (
-                        <span className="shrink-0 rounded-full bg-hotpink/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-hotpink">
+                        <span className="shrink-0 rounded-full bg-hotpink/10 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-hotpink">
                           {item.tag}
                         </span>
                       )}
                     </div>
-                    {item.desc && <p className="mt-0.5 truncate text-xs text-muted-foreground">{item.desc}</p>}
+                    {item.desc && <p className="mt-0.5 truncate text-[10px] sm:text-xs text-muted-foreground">{item.desc}</p>}
                   </div>
                   <div className="shrink-0 text-right">
-                    <p className="font-display text-base font-black text-ink">{item.price}</p>
+                    <p className="font-display text-sm sm:text-base font-black text-ink">{item.price}</p>
                   </div>
                   <motion.button
                     onClick={() => handleAdd(item)}
@@ -161,9 +161,9 @@ export function MenuSection() {
                     whileTap={{ scale: 0.85 }}
                     animate={isPulsing ? { scale: [1, 1.25, 1] } : { scale: 1 }}
                     transition={{ duration: 0.45 }}
-                    className="shrink-0 grid h-9 w-9 place-items-center rounded-full bg-pink-grad text-white shadow-soft transition group-hover:scale-110"
+                    className="shrink-0 grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-full bg-pink-grad text-white shadow-soft transition group-hover:scale-110"
                   >
-                    {isPulsing ? <Check className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
+                    {isPulsing ? <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4" /> : <Plus className="h-3.5 w-3.5 sm:h-4 sm:w-4" />}
                   </motion.button>
                 </motion.div>
               );
