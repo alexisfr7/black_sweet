@@ -11,9 +11,21 @@ export function Footer() {
         <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-6 text-xs uppercase tracking-wider">
           <span>© {new Date().getFullYear()} Black Sweet</span>
           <span className="opacity-50">Tous droits réservés</span>
-          <span className="ml-auto opacity-50">Fait avec ♥ à Paris</span>
+          <span className="ml-auto opacity-50">
+            Fait avec ♥ par{" "}
+            <a
+              href="https://aureon-digital.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-hotpink transition-colors"
+            >
+              Aureon
+            </a>{" "}
+            à Paris
+          </span>
         </div>
       </div>
     </footer>
   );
 }
+

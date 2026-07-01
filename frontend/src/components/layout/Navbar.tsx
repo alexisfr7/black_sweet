@@ -3,26 +3,25 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Home, UtensilsCrossed, Image as ImageIcon, MapPin, ShoppingBag } from "lucide-react";
-import Link from "next/link";
 import { useCart } from "@/components/ui/CartContext";
 
 const navItems = [
-  { href: "/#top", icon: Home, label: "Accueil" },
-  { href: "/services", icon: UtensilsCrossed, label: "Carte" },
-  { href: "/#galerie", icon: ImageIcon, label: "Galerie" },
-  { href: "/contact", icon: MapPin, label: "Contact" },
+  { href: "#top", icon: Home, label: "Accueil" },
+  { href: "#menu", icon: UtensilsCrossed, label: "Carte" },
+  { href: "#galerie", icon: ImageIcon, label: "Galerie" },
+  { href: "#visite", icon: MapPin, label: "Visite" },
 ];
 
 export function Navbar() {
-  const [active, setActive] = useState("/#top");
+  const [active, setActive] = useState("#top");
   const { count, setOpen } = useCart();
 
   useEffect(() => {
-    const ids = ["top", "galerie"];
+    const ids = ["top", "menu", "galerie", "visite"];
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) setActive("/#" + e.target.id);
+          if (e.isIntersecting) setActive("#" + e.target.id);
         });
       },
       { rootMargin: "-40% 0px -55% 0px" }
@@ -40,7 +39,7 @@ export function Navbar() {
         {navItems.map((it) => {
           const isActive = active === it.href;
           return (
-            <Link
+            <a
               key={it.href}
               href={it.href}
               className={`relative flex flex-1 flex-col items-center gap-0.5 rounded-full px-2 py-2 text-[10px] font-semibold transition ${
@@ -57,7 +56,7 @@ export function Navbar() {
               )}
               <it.icon className="relative h-4 w-4" />
               <span className="relative truncate">{it.label}</span>
-            </Link>
+            </a>
           );
         })}
         <motion.button
@@ -86,3 +85,4 @@ export function Navbar() {
     </nav>
   );
 }
+
