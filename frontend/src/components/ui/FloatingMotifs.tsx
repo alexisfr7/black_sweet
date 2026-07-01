@@ -78,9 +78,9 @@ export function FloatingMotifs({ variant }: { variant: Variant }) {
   if (variant === "hero") {
     return (
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <Butterfly className="top-[14%] left-[6%] h-12 w-12" delay={0} />
-        <Butterfly className="top-[34%] right-[8%] h-16 w-16" delay={2.5} hue="oklch(0.78 0.2 5)" />
-        <Butterfly className="bottom-[22%] left-[18%] h-10 w-10" delay={4} />
+        <Butterfly className="top-[14%] left-[12%] sm:left-[6%] h-8 w-8 sm:h-12 sm:w-12" delay={0} />
+        <Butterfly className="top-[34%] right-[8%] h-12 w-12 sm:h-16 sm:w-16" delay={2.5} hue="oklch(0.78 0.2 5)" />
+        <Butterfly className="bottom-[22%] left-[24%] sm:left-[18%] h-7 w-7 sm:h-10 sm:w-10" delay={4} />
         <Sparkle className="top-[20%] right-[24%]" delay={0.6} />
         <Sparkle className="bottom-[30%] left-[40%]" delay={1.8} />
         <Sparkle className="top-[60%] right-[40%]" delay={3} />
@@ -94,8 +94,8 @@ export function FloatingMotifs({ variant }: { variant: Variant }) {
   if (variant === "story") {
     return (
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <Butterfly className="top-[18%] right-[6%] h-14 w-14" delay={1} />
-        <Butterfly className="bottom-[12%] left-[4%] h-10 w-10" delay={3.5} hue="oklch(0.82 0.13 5)" />
+        <Butterfly className="top-[18%] right-[6%] h-10 w-10 sm:h-14 sm:w-14" delay={1} />
+        <Butterfly className="bottom-[12%] left-[10%] sm:left-[4%] h-7 w-7 sm:h-10 sm:w-10" delay={3.5} hue="oklch(0.82 0.13 5)" />
         <Sparkle className="top-[40%] left-[10%]" delay={0.4} />
         <Sparkle className="bottom-[30%] right-[14%]" delay={2.2} />
       </div>
@@ -104,17 +104,17 @@ export function FloatingMotifs({ variant }: { variant: Variant }) {
   if (variant === "menu") {
     return (
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <Butterfly className="top-[10%] left-[4%] h-10 w-10" delay={0.5} />
-        <Butterfly className="top-[40%] right-[3%] h-12 w-12" delay={2.8} hue="oklch(0.78 0.2 5)" />
+        <Butterfly className="top-[10%] left-[10%] sm:left-[4%] h-7 w-7 sm:h-10 sm:w-10" delay={0.5} />
+        <Butterfly className="top-[40%] right-[3%] h-9 w-9 sm:h-12 sm:w-12" delay={2.8} hue="oklch(0.78 0.2 5)" />
         <Sparkle className="top-[26%] right-[20%]" delay={1.2} />
-        <Sparkle className="bottom-[18%] left-[12%]" delay={2.6} />
+        <Sparkle className="bottom-[18%] left-[18%] sm:left-[12%]" delay={2.6} />
       </div>
     );
   }
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      <Butterfly className="top-[12%] right-[10%] h-12 w-12" delay={0} />
-      <Butterfly className="bottom-[10%] left-[6%] h-10 w-10" delay={3} hue="oklch(0.82 0.13 5)" />
+      <Butterfly className="top-[12%] right-[10%] h-9 w-9 sm:h-12 sm:w-12" delay={0} />
+      <Butterfly className="bottom-[10%] left-[12%] sm:left-[6%] h-7 w-7 sm:h-10 sm:w-10" delay={3} hue="oklch(0.82 0.13 5)" />
       <Sparkle className="top-[40%] left-[16%]" delay={1} />
       <Sparkle className="bottom-[30%] right-[20%]" delay={2.5} />
     </div>
